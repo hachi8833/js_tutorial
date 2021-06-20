@@ -1,18 +1,14 @@
-<!DOCTYPE html>
 <html>
   <head>
     <title>JavaScriptを学ぼう</title>
     <meta charset="utf-8">
+    <script src="day.js"></script>
     <script>
-      const daysOfTheWeek = ["日曜日", "月曜日", "火曜日", "水曜日",
-                             "木曜日", "金曜日", "土曜日"];
       let now = new Date();
-      let dayName = daysOfTheWeek[now.getDay()];
-      alert(`Hello, world! 素敵な${dayName}になりますように。`);
-  </script>
+      alert(greeting(now));
+    </script>
   </head>
   <body>
-    <h1>Hello, world!</h1>
-    <p>このページにはJavaScriptで書かれたアラートがあります。</p>
+
   </body>
 </html>

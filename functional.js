@@ -26,3 +26,14 @@ function validUrlList(list){
   return list.map(elm => "https://example.com/" + urlify(elm));
 }
 console.log(validUrlList(states));
+
+function imperativeSingles(elements) {
+  let singles = [];
+  elements.forEach(function(element) {
+    if (element.split(/\s+/).length === 1) {
+      singles.push(element);
+    }
+  });
+  return singles;
+}
+console.log(imperativeSingles(states));

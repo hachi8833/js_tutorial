@@ -7,9 +7,8 @@ function reverse(string) {
 function Phrase(content) {
   this.content = content;
 
-  // パリンドロームならtrueを、違うならfalseを返す
-  this.palindrome = function palindrome() {
-    let processedContent = this.content.toLowerCase();
-    return processedContent === reverse(processedContent);
-  }
+  // フレーズを全部大文字にする
+  this.louder = function() {
+    return this.content.toUpperCase()
+  };
 }

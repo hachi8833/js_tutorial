@@ -37,3 +37,15 @@ function imperativeSingles(elements) {
   return singles;
 }
 console.log(imperativeSingles(states));
+
+// 1単語の文字列抽出: 命令型バージョン
+function imperativeSingles(elements) {
+  let singles = [];
+  elements.forEach(function(element) {
+    if (element.split(/\s+/).length === 1) {
+      singles.push(element);
+    }
+  });
+  return singles;
+}
+console.log(imperativeSingles(states));

@@ -22,14 +22,6 @@ function Phrase(content) {
 function TranslatedPhrase(content, translation) {
   this.content = content;
   this.translation = translation;
-
-  // パリンドロームのテスト用に小文字に変換したcontentを返す
-  this.processedContent = function processedContent() {
-    return this.content.toLowerCase();
-  }
-
-  // パリンドロームならtrueを、違うならfalseを返す
-  this.palindrome = function palindrome() {
-    return this.processedContent() === reverse(this.processedContent());
-  }
 }
+
+TranslatedPhrase.prototype = new Phrase();

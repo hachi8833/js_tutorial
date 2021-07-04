@@ -71,3 +71,12 @@ function imperativeLengths(elements) {
   return lengths;
 }
 console.log(imperativeLengths(states));
+
+// lengths: 関数型バージョン
+function functionalLengths(elements) {
+  return elements.reduce((lengths, element) => {
+                          lengths[element] = element.length;
+                          return lengths;
+                        }, {});
+}
+console.log(functionalLengths(states));

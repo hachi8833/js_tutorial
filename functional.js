@@ -27,17 +27,6 @@ function validUrlList(list){
 }
 console.log(validUrlList(states));
 
-function imperativeSingles(elements) {
-  let singles = [];
-  elements.forEach(function(element) {
-    if (element.split(/\s+/).length === 1) {
-      singles.push(element);
-    }
-  });
-  return singles;
-}
-console.log(imperativeSingles(states));
-
 // 1単語の文字列抽出: 命令型バージョン
 function imperativeSingles(elements) {
   let singles = [];
@@ -49,3 +38,9 @@ function imperativeSingles(elements) {
   return singles;
 }
 console.log(imperativeSingles(states));
+
+// 1単語の文字列抽出: 関数型バージョン
+function functionalSingles(elements) {
+  return elements.filter(element => element.split(/\s+/).length === 1);
+}
+console.log(functionalSingles(states));

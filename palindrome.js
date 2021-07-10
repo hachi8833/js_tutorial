@@ -22,6 +22,11 @@ function Phrase(content) {
 function TranslatedPhrase(content, translation) {
   this.content = content;
   this.translation = translation;
+
+  // パリンドロームのテスト用に処理した訳文を返す
+  this.processedContent = function processedContent() {
+    return this.translation.toLowerCase();
+  }
 }
 
 TranslatedPhrase.prototype = new Phrase();

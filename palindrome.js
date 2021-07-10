@@ -7,6 +7,10 @@ function reverse(string) {
 function Phrase(content) {
   this.content = content;
 
+  this.processor = function(string) {
+    return string.toLowerCase();
+  }
+
   // パリンドロームのテスト用に小文字に変換したcontentを返す
   this.processedContent = function processedContent() {
     return this.content.toLowerCase();
